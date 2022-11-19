@@ -27,6 +27,6 @@ Please feel free to comment of go to the Github Repo and submit an issue if you 
 
 ### Github Link: 
 
-(insert link here pls)
+(https://github.com/OOCAZ/react-classification-banner)
 
 
