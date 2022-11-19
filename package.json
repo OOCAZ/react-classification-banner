@@ -1,6 +1,6 @@
 {
   "name": "react-classification-banner",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "main": "./src/ClassificationBanner.js",
   "devDependencies": {
     "babel-core": "^6.21.0",
