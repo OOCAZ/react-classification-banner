@@ -1,7 +1,6 @@
 {
   "name": "react-classification-banner",
   "version": "0.1.0",
-  "private": true,
   "main": "./src/ClassificationBanner.js",
   "peerDependencies": {
     "prop-types": "^15.6.0",
