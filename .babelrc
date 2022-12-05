@@ -1,7 +1,6 @@
 {
-    "presets": [
-        "react",
-        "env",
-        "stage-0"
-    ]
+  "presets": ["react-app"],
+  "plugins": [
+    ["@babel/plugin-proposal-object-rest-spread", { "loose": true, "useBuiltIns": true }]
+  ]
 }

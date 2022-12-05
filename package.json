@@ -1,40 +1,59 @@
 {
   "name": "react-classification-banner",
-  "version": "0.1.5",
-  "main": "./src/ClassificationBanner.js",
+  "version": "1.0.20",
+  "description": "A React component for Automatically coloring banners for the top and bottom of a webpage that display the classification level.",
+  "main": "./dist/ClassificationBanner.js",
+  "type": "module",
+  "contributors": [
+    "Zac Poorman <zacpoorman@gmail.com>"
+  ],
   "license": "MIT",
-  "devDependencies": {
-    "babel-core": "^6.21.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "path": "^0.12.7",
-    "prop-types": "^15.6.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "webpack": "^4.5.0",
-    "webpack-cli": "^3.2.1"
-},
   "scripts": {
-    "build": "webpack"
-},
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "clean": "rm dist/*",
+    "build": "npm run clean && rm -rf dist && set NODE_ENV=production&& babel src --out-dir dist --copy-files --ignore __tests__,spec.jsx,test.jsx,__snapshots__",
+    "lint": "eslint src",
+    "test": "jest --coverage --collectCoverageFrom=src/**/*.{js,jsx}"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "homepage": "http://github.com/oocaz/react-classification-banner#readme",
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "@testing-library/react": "^13.4.0",
+    "babel-eslint": "^10.1.0",
+    "babel-preset-react-app": "9.1.2",
+    "concurrently": "^5.3.0",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
+    "pre-commit": "^1.2.2",
+    "react-css-modules": "^4.7.11",
+    "webpack": "4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oocaz/react-classification-banner.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/oocaz/react-classification-banner/issues"
+  },
+  "keywords": [
+    "react",
+    "classification",
+    "secret",
+    "banners"
+  ]
 }

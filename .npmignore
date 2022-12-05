@@ -1,2 +1,12 @@
+*.swp
+node_modules
+.idea
 .babelrc
-webpack.config.js
+.eslintignore
+.eslintrc.json
+*.code-workspace
+/dist/ClassificationBanner.test.js
+/src/ClassificationBanner.test.js
+coverage
+.gitignore
+src
