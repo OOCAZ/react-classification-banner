@@ -1,29 +1,36 @@
-import React from 'react'
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable linebreak-style */
+import React from 'react';
 
 const styles = {
   unclassified: {
     color: '#ffffff',
-    backgroundColor: '#000000',
+    backgroundColor: '#007a33',
   },
   cui: {
     color: '#ffffff',
-    backgroundColor: '#06a94d',
+    backgroundColor: '#502b85',
   },
   confidential: {
     color: '#ffffff',
     backgroundColor: '#0033a0',
+  },
+  controlled: {
+    color: '#ffffff',
+    backgroundColor: '#502b85',
   },
   secret: {
     color: '#ffffff',
     backgroundColor: '#c8102e',
   },
   topsecret: {
-    color: '#ffffff',
-    backgroundColor: '#ff671f',
+    color: '#000000',
+    backgroundColor: '#ff8c00',
   },
   topsecret_sci: {
     color: '#000000',
-    backgroundColor: '#f7ea48',
+    backgroundColor: '#fce83a',
   },
   top: {
     position: 'fixed',
@@ -49,14 +56,13 @@ const styles = {
     backgroundColor: '#000000',
     bottom: 0,
   },
-}
+};
 
- export default function ClassificationBanner(classification){
-
+export default function ClassificationBanner(classification) {
   return (
     <div>
-      <div data-testid="classification-header" style={{...styles.top, ...styles[classification.classification.toString()]}}>{classification.classification.toUpperCase()}</div>
-      <div data-testid="classification-footer" style={{...styles.bottom, ...styles[classification.classification.toString()]}}>{classification.classification.toUpperCase()}</div>
+      <div data-testid="classification-header" style={{ ...styles.top, ...styles[classification.classification.toString()] }}>{classification.classification.toUpperCase()}</div>
+      <div data-testid="classification-footer" style={{ ...styles.bottom, ...styles[classification.classification.toString()] }}>{classification.classification.toUpperCase()}</div>
     </div>
-  )
+  );
 }
