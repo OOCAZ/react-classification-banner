@@ -11,3 +11,4 @@ coverage
 .gitignore
 src
 webpack.config.js
+.env

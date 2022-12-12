@@ -28,7 +28,7 @@ module.exports = {
   },
   mode: 'production',
   externals: {
-    'react': 'commonjs react'
+    'react': 'commonjs2 react'
   }
 };
 

@@ -1,7 +1,4 @@
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable linebreak-style */
-const React = require('react');
+import React from 'react';
 
 const styles = {
   unclassified: {
