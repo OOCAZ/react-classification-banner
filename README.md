@@ -6,6 +6,10 @@ Basic Component for rendering a classification banner in react as a header and a
 
 Use like a normal React Component with the only specifier needed being the classifiaction variable set to the text values of "unclassified", "confidential", "cui", "secret", "topsecret", or "topsecret_sci".
 
+# Ongoing Bug
+
+I am currently trying to fix a bug where once imported the unit testing through jest will flag this module as not a module. Any help solving this issue would be appreciated. https://github.com/OOCAZ/react-classification-banner/issues/1
+
 ## Install
 
 ```bash
