@@ -1,6 +1,11 @@
 {
-  "presets": ["react-app"],
+  "presets": ["@babel/preset-react"],
   "plugins": [
-    ["@babel/plugin-proposal-object-rest-spread", { "loose": true, "useBuiltIns": true }]
-  ]
+        "@babel/transform-react-jsx"
+    ],
+    "env": {
+      "test" : {
+        "plugins": ["@babel/plugin-transform-modules-commonjs"]
+      }
+    }
 }

@@ -4,7 +4,8 @@ module.exports = {
   entry: [path.resolve(__dirname, './src/ClassificationBanner.js')],
   output: {
     path: path.resolve(__dirname, './dist/'),
-    publicPath: '../classification-banner'
+    publicPath: '../classification-banner',
+    libraryTarget: "commonjs2"
   },
   resolve: {
       extensions: ['.js', '.jsx']
@@ -29,7 +30,7 @@ module.exports = {
   },
   mode: 'production',
   externals: {
-    'react': 'commonjs2 react'
+    'react': 'commonjs react'
   }
 };
 
