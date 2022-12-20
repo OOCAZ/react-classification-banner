@@ -1,10 +1,11 @@
 var path = require('path');
 
 module.exports = {
-  entry: [path.resolve(__dirname, './src/ClassificationBanner.js')],
+  entry: './src/ClassificationBanner.js',
   output: {
     path: path.resolve(__dirname, './dist/'),
     publicPath: '../classification-banner',
+    filename: 'bundle.js',
     libraryTarget: "commonjs2"
   },
   resolve: {
@@ -20,10 +21,6 @@ module.exports = {
         ],
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-            plugins: ['@babel/plugin-transform-runtime']
-          }
         }
       }
     ]
