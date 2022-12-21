@@ -29,13 +29,13 @@ The colors are automatic and if you enter an invalid value the banner will be bl
 
 # Downloading and Building locally
 
-You will need to run the `npm run build` command and then run the npm run build:cjs command and then you should be good to go.
+You will need to run the `npm run build` command and then run the `npm run build:cjs` command and then you should be good to go.
 
 ## ! Please note ! The Banner will float over your other content and you will need to add a spacer of 25 pixels if you want all of your content to be seen!
 
 Please feel free to comment of go to the Github Repo and submit an issue if you have a question or would like to see additional functionality.
 
-## Additional info, the build will only work on windows rn, working on fix
+## Additional info, the build will only work on Linux or git bash rn, working on fix
 
 ### Github Link:
 
