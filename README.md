@@ -1,4 +1,4 @@
-# REACT-CLASSIFIACTION-BANNER
+# REACT-CLASSIFICATION-BANNER
 
 Basic Component for rendering a classification banner in react as a header and a footer that floats over everything.
 
