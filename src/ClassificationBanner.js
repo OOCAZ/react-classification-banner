@@ -39,6 +39,7 @@ const styles = {
     color: '#c8102e',
     backgroundColor: '#000000',
     top: 0,
+    marginBottom: 25,
   },
   bottom: {
     position: 'fixed',
@@ -50,12 +51,13 @@ const styles = {
     color: '#c8102e',
     backgroundColor: '#000000',
     bottom: 0,
+    marginTop:25
   },
 };
 
 export default function ClassificationBanner(classification) {
   return (
-    <div>
+    <div className="react-classification-banner">
       <div data-testid="classification-header" style={{ ...styles.top, ...styles[classification.classification.toString()] }}>{classification.classification.toUpperCase()}</div>
       <div data-testid="classification-footer" style={{ ...styles.bottom, ...styles[classification.classification.toString()] }}>{classification.classification.toUpperCase()}</div>
     </div>
