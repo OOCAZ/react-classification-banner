@@ -55,11 +55,14 @@ const styles = {
   },
 };
 
-export default function ClassificationBanner(classification) {
+const ClassificationBanner = (props) =>{
   return (
     <div className="react-classification-banner">
-      <div data-testid="classification-header" style={{ ...styles.top, ...styles[classification.classification.toString()] }}>{classification.classification.toUpperCase()}</div>
-      <div data-testid="classification-footer" style={{ ...styles.bottom, ...styles[classification.classification.toString()] }}>{classification.classification.toUpperCase()}</div>
+      <div data-testid="classification-header" style={{ ...styles.top, ...styles[props.classification.toString()] }}>{props.classification.toUpperCase()}</div>
+      <div style={{marginTop: "50px", marginBottom:"50px"}}>{props.children}</div>
+      <div data-testid="classification-footer" style={{ ...styles.bottom, ...styles[props.classification.toString()] }}>{props.classification.toUpperCase()}</div>
     </div>
   );
 }
+
+export default ClassificationBanner
