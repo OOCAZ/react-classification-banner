@@ -29,6 +29,9 @@ const styles = {
     color: '#000000',
     backgroundColor: '#fce83a',
   },
+  container: {
+    overflow: "scroll",
+  },
   top: {
     position: 'fixed',
     display: 'flex',
@@ -38,8 +41,8 @@ const styles = {
     justifyContent: 'center',
     color: '#c8102e',
     backgroundColor: '#000000',
+    zIndex: 1000,
     top: 0,
-    zIndex: 1000
   },
   children: {
     position: 'fixed',
@@ -48,7 +51,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: '25px',
-    marginBottom: '25px'
+    marginBottom: '25px',
   },
   bottom: {
     position: 'fixed',
@@ -60,17 +63,17 @@ const styles = {
     color: '#c8102e',
     backgroundColor: '#000000',
     bottom: 0,
-    zIndex: 1000
+    zIndex: 1000,
   },
 };
 
-const ClassificationBanner = (props, {children}) => (
-    <div className="react-classification-banner">
+const ClassificationBanner = (props) => (
+    <div className="react-classification-banner" style={{...styles.container}}>
       <div data-testid="classification-header" style={{ ...styles.top, ...styles[props.classification.toString()] }}>{props.classification.toUpperCase()}</div>
       <div style={{...styles.children}}>{props.children}</div>
       <div data-testid="classification-footer" style={{ ...styles.bottom, ...styles[props.classification.toString()] }}>{props.classification.toUpperCase()}</div>
     </div>
-  );
+);
 
 
 export default ClassificationBanner
