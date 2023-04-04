@@ -12,14 +12,34 @@ Use like a normal React Component with the only specifier needed being the class
 npm install --save 'react-classification-banner'
 ```
 
-## Basic Usage (usually in your index.js, then it renders over everything)
+## Basic Usage (usually in your index.js, then it renders over everything. Important Note!!! you will need a margin of 25px on top and bottom.)
 
 ```js
 import React from "react";
 import ClassificationBanner from "react-classification-banner";
 
 function myCoolExample() {
-  return <ClassificationBanner classification="unclassified" />;
+  return (
+    <ClassificationBanner classification="unclassified" />
+    <App />
+  );
+}
+
+export default myCoolExample;
+```
+
+## Experimential Usage ( In version 3.0.11 and above. Usually in your index.js, then it renders over everything. Important Note!!! This will render as a child of the banner and I cannot completely confirm the functionality of this working well yet.)
+
+```js
+import React from "react";
+import ClassificationBanner from "react-classification-banner";
+
+function myCoolExample() {
+  return (
+    <ClassificationBanner classification="unclassified">
+      <App />
+    </ClassificationBanner>
+  );
 }
 
 export default myCoolExample;

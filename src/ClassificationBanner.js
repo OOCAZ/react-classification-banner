@@ -39,7 +39,16 @@ const styles = {
     color: '#c8102e',
     backgroundColor: '#000000',
     top: 0,
-    marginBottom: 25,
+    zIndex: 1000
+  },
+  children: {
+    position: 'fixed',
+    display: 'flex',
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: '25px',
+    marginBottom: '25px'
   },
   bottom: {
     position: 'fixed',
@@ -51,18 +60,17 @@ const styles = {
     color: '#c8102e',
     backgroundColor: '#000000',
     bottom: 0,
-    marginTop:25
+    zIndex: 1000
   },
 };
 
-const ClassificationBanner = (props) =>{
-  return (
+const ClassificationBanner = (props, {children}) => (
     <div className="react-classification-banner">
       <div data-testid="classification-header" style={{ ...styles.top, ...styles[props.classification.toString()] }}>{props.classification.toUpperCase()}</div>
-      <div style={{marginTop: "50px", marginBottom:"50px"}}>{props.children}</div>
+      <div style={{...styles.children}}>{props.children}</div>
       <div data-testid="classification-footer" style={{ ...styles.bottom, ...styles[props.classification.toString()] }}>{props.classification.toUpperCase()}</div>
     </div>
   );
-}
+
 
 export default ClassificationBanner
