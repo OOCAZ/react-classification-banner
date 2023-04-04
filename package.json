@@ -1,6 +1,6 @@
 {
   "name": "react-classification-banner",
-  "version": "3.0.25",
+  "version": "3.0.26",
   "description": "A React component for Automatically coloring banners for the top and bottom of a webpage that display the classification level.",
   "main": "./dist/bundle.js",
   "module": "./dist/ClassificationBanner.js",
