@@ -75,5 +75,4 @@ const ClassificationBanner = (props) => (
     </div>
 );
 
-
 export default ClassificationBanner

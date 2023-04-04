@@ -11,7 +11,7 @@
   "scripts": {
     "clean": "rm dist/*",
     "build:cjs": "webpack --mode production",
-    "build": "npm run clean && rm -rf dist && set NODE_ENV=production&& babel src --out-dir dist --copy-files --ignore __tests__,spec.jsx,test.jsx,__snapshots__",
+    "build": "npm run clean && rm -rf dist && set NODE_ENV=production&& babel src --ignore ClassificationBanner.test.js --out-dir dist --copy-files ",
     "lint": "eslint src",
     "test": "jest --coverage --collectCoverageFrom=src/**/*.{js,jsx}"
   },
